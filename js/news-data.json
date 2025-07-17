@@ -1,0 +1,28 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "Major Physics Engine Update",
+      "date": "January 15, 2025",
+      "image": "./pictures/new.jpg",
+      "short": "We're excited to announce a major update to our physics engine! The new version features even more realistic ball movement, improved collision detection, and smoother animations.",
+      "full": "We're excited to announce a major update to our physics engine! The new version features even more realistic ball movement, improved collision detection, and smoother animations. Players will experience enhanced gameplay with more precise controls and better visual feedback.\n\nThe update includes new particle effects, improved lighting, and optimized performance for mobile devices. The physics calculations have been completely rewritten to provide more accurate ball trajectories and realistic bouncing behavior.\n\nKey improvements include:\n• Enhanced collision detection system\n• Improved ball momentum calculations\n• Better visual feedback for interactions\n• Optimized performance for all devices\n• New particle effects for impacts\n\nGet ready for an even more immersive Balls Out 3D Online experience!"
+    },
+    {
+      "id": 2,
+      "title": "New Challenging Levels Released",
+      "date": "January 10, 2025",
+      "image": "./pictures/new2.jpg",
+      "short": "We've added 20 brand new levels to Balls Out 3D Online! These levels introduce exciting new mechanics including moving platforms, gravity switches, and complex obstacle courses.",
+      "full": "We've added 20 brand new levels to Balls Out 3D Online! These levels introduce exciting new mechanics including moving platforms, gravity switches, and complex obstacle courses that will test your physics knowledge to the limit.\n\nEach new level has been carefully designed to provide a unique challenge while maintaining the addictive gameplay that players love. The new levels feature:\n• Moving platforms with timing challenges\n• Gravity switches that change ball behavior\n• Complex obstacle courses requiring strategy\n• Hidden bonus areas in each level\n• Progressive difficulty scaling\n\nCan you master all the new challenges? The levels range from beginner-friendly introductions to expert-level brain teasers that will push your physics understanding to the absolute limit!"
+    },
+    {
+      "id": 3,
+      "title": "Community Feedback Implementation",
+      "date": "January 5, 2025",
+      "image": "./pictures/new.jpg",
+      "short": "Thanks to your amazing feedback, we've implemented several improvements based on community suggestions! The new update includes customizable controls, improved tutorial system, and better difficulty progression.",
+      "full": "Thanks to your amazing feedback, we've implemented several improvements based on community suggestions! The new update includes customizable controls, improved tutorial system, and better difficulty progression.\n\nWe're committed to making Balls Out 3D Online the best physics puzzle game possible, and your input is invaluable to us. The latest update brings:\n• Customizable touch sensitivity settings\n• Enhanced tutorial with interactive examples\n• Improved difficulty curve for new players\n• Better visual indicators for ball paths\n• Accessibility options for colorblind players\n• Performance optimizations for older devices\n\nKeep the feedback coming! We read every suggestion and are constantly working to improve the game based on your experiences."
+    }
+  ]
+}

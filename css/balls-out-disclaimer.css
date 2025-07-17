@@ -1,0 +1,124 @@
+/* Disclaimer page styles */
+.disclaimer-hero {
+  text-align: center;
+  padding: 4rem 0 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-bg) 0%,
+    rgba(79, 70, 229, 0.1) 100%
+  );
+  margin-bottom: 3rem;
+}
+
+.disclaimer-title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.disclaimer-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.disclaimer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.disclaimer-text {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  border-radius: var(--radius-main);
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.disclaimer-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.disclaimer-text h2:first-child {
+  margin-top: 0;
+}
+
+.disclaimer-text h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.disclaimer-text h3:first-child {
+  margin-top: 0;
+}
+
+.disclaimer-text p {
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.disclaimer-text a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition-main);
+}
+
+.disclaimer-text a:hover {
+  color: var(--color-accent);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .disclaimer-title {
+    font-size: 2.5rem;
+  }
+
+  .disclaimer-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .disclaimer-hero {
+    padding: 3rem 0 2rem;
+  }
+
+  .disclaimer-title {
+    font-size: 2rem;
+  }
+
+  .disclaimer-content {
+    padding: 0 1rem;
+  }
+
+  .disclaimer-text {
+    padding: 1.5rem;
+  }
+
+  .disclaimer-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .disclaimer-text h3 {
+    font-size: 1.2rem;
+  }
+}

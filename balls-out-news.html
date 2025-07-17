@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=360, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>ChallengePeakPlay.com – Balls Out News</title>
+    <meta
+      name="description"
+      content="Latest news and updates about Balls Out 3D Online - the addictive physics puzzle game with stunning 3D graphics and realistic ball mechanics."
+    />
+    <meta
+      name="keywords"
+      content="Balls Out 3D Online, news, updates, physics puzzle, 3D game, mobile gaming"
+    />
+    <link rel="icon" type="image/x-icon" href="./pictures/favicon.jpg" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/battle-log.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-modal" id="mobile-menu-modal">
+      <div class="mobile-menu-content">
+        <button
+          class="close-modal"
+          id="close-mobile-menu"
+          aria-label="Close menu"
+        >
+          &times;
+        </button>
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="balls-out-news.html">Balls Out News</a></li>
+          <li><a href="balls-out-contacts.html">Contacts</a></li>
+          <li><a href="balls-out-disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <main class="container">
+      <section class="news-hero">
+        <h1 class="news-title">Balls Out 3D Online News</h1>
+        <p class="news-subtitle">
+          Stay updated with the latest news, updates, and announcements about
+          our addictive physics puzzle game!
+        </p>
+      </section>
+
+      <section class="news-content" id="news-container">
+        <!-- News items will be loaded here dynamically -->
+      </section>
+    </main>
+    <div id="footer"></div>
+    <script src="js/main.js"></script>
+    <script src="js/balls-out-footer-year.js"></script>
+    <script src="js/balls-out-header-footer.js"></script>
+    <script>
+      // Load news data and render with Read More functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("./js/news-data.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const newsContainer = document.getElementById("news-container");
+
+            data.news.forEach((newsItem) => {
+              const article = document.createElement("article");
+              article.className = "news-item";
+              article.innerHTML = `
+                <div class="news-image">
+                  <img src="${newsItem.image}" alt="${newsItem.title}" />
+                </div>
+                <div class="news-text">
+                  <h2>${newsItem.title}</h2>
+                  <p class="news-date">${newsItem.date}</p>
+                  <div class="news-content-short">
+                    <p>${newsItem.short}</p>
+                  </div>
+                  <div class="news-content-full" style="display: none;">
+                    <p>${newsItem.full.replace(/\n/g, "<br>")}</p>
+                  </div>
+                  <button class="read-more-btn" onclick="toggleNewsContent(${
+                    newsItem.id
+                  })">
+                    Read More
+                  </button>
+                </div>
+              `;
+              newsContainer.appendChild(article);
+            });
+          })
+          .catch((error) => {
+            console.error("Error loading news data:", error);
+          });
+      });
+
+      // Toggle between short and full content
+      function toggleNewsContent(newsId) {
+        const newsItem = event.target.closest(".news-item");
+        const shortContent = newsItem.querySelector(".news-content-short");
+        const fullContent = newsItem.querySelector(".news-content-full");
+        const button = newsItem.querySelector(".read-more-btn");
+
+        if (fullContent.style.display === "none") {
+          shortContent.style.display = "none";
+          fullContent.style.display = "block";
+          button.textContent = "Read Less";
+        } else {
+          shortContent.style.display = "block";
+          fullContent.style.display = "none";
+          button.textContent = "Read More";
+        }
+      }
+    </script>
+  </body>
+</html>
